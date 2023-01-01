@@ -14,6 +14,7 @@ def main():
                         help="paths to video files to transcribe")
     parser.add_argument("--model", default="small",
                         choices=whisper.available_models(), help="name of the Whisper model to use")
+    parser.add_argument("--language", type=str, help="specify language to detect")
     parser.add_argument("--output_dir", "-o", type=str,
                         default=".", help="directory to save the outputs")
     parser.add_argument("--output_srt", type=str2bool, default=False,
